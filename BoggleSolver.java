@@ -131,10 +131,14 @@ public class BoggleSolver
 
 				if(res == 3){ //word and prefix
 					//TODO: Write the code for the word and prefix case
+					if(currentSolution.length() >= 3){
 					System.out.println(currentSolution.toString());
+					}
+
+					solve(nextCoords.row, nextCoords.col, depth + 1);
 				}
 
-				solve(nextCoords.row, nextCoords.col, depth + 1);
+					
 
 				currentSolution.deleteCharAt(currentSolution.length()-1);
 				theBoard[nextCoords.row][nextCoords.col] =
@@ -154,8 +158,10 @@ public class BoggleSolver
 		}
 
 		// now checking if already used
-		
-		
+		char c = theBoard[coords.row][coords.col];
+		boolean unused = Character.isLowerCase(c);
+		return unused;
+
 	}
 
 	private char nextChar(int row, int col, int direction){
