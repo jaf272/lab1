@@ -107,10 +107,10 @@ public class BoggleSolver
 
 	private void solve(int row, int col, /*for debugging*/ int depth){
 		//for debugging
-		for(int i=0; i<depth; i++){
-		System.out.print(" ");
-		}
-		System.out.println(row + ", " + col + " " + currentSolution.toString());
+		// for(int i=0; i<depth; i++){
+		// System.out.print(" ");
+		//}
+		// System.out.println(row + ", " + col + " " + currentSolution.toString());
 		for(int direction=0; direction<8; direction++){
 			if(isValid(row, col, direction)){
 				currentSolution.append(nextChar(row, col, direction));
