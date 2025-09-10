@@ -131,7 +131,10 @@ public class BoggleSolver
 
 				if(res == 3){ //word and prefix
 					//TODO: Write the code for the word and prefix case
+					System.out.println(currentSolution.toString());
 				}
+
+				solve(nextCoords.row, nextCoords.col, depth + 1);
 
 				currentSolution.deleteCharAt(currentSolution.length()-1);
 				theBoard[nextCoords.row][nextCoords.col] =
