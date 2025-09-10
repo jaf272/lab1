@@ -149,7 +149,13 @@ public class BoggleSolver
 		Coordinates coords = nextCoordinates(row, col, direction);
 
 		//TODO: Write the code to check whether already used / at an edge of the board
-		return false;
+		if(coords.row < 0 || coords.row >= 4 || coords.col < 0 || coords.col >= 4){
+			return false;
+		}
+
+		// now checking if already used
+		
+		
 	}
 
 	private char nextChar(int row, int col, int direction){
